@@ -79,3 +79,79 @@ If you'd like to run the application locally or explore the code further, follow
    ```bash
    git clone https://github.com/yourusername/alzheimers-risk-prediction.git
    cd alzheimers-risk-prediction/backend
+   
+2. **Create a Virtual Environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install depndecies**
+
+   ```bash
+   pip install -r requirements.txt
+
+4. **Set Environment Variables**
+
+   ```bash
+   export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-key.json"
+   export BUCKET_NAME="your-google-cloud-bucket-name"
+   export PIPELINE_FILENAME="your_risk_model.joblib"
+   export LOCAL_PIPELINE_PATH="/app/models/your_risk_model.joblib"
+
+5. **Start the Backend server**
+
+   ```bash
+   flask run --host=0.0.0.0 --port=8080
+
+**Note**:
+
+- Replace `/path/to/your/service-account-key.json` with the actual path to your Google Cloud service account key JSON file.
+- Update `your-google-cloud-bucket-name` with the name of your Google Cloud Storage bucket.
+- Ensure that the `your_risk_model.joblib` file is correctly placed in the specified `LOCAL_PIPELINE_PATH`.
+
+### Running the Frontend
+
+There are two primary ways to run the frontend of the **Alzheimer's Risk Prediction** application: **without Docker** and **with Docker**. Choose the method that best fits your development environment.
+
+#### Without Docker
+
+If you prefer to run the frontend locally without using Docker, follow these steps:
+
+1. **Navigate to the Frontend Directory**
+
+   Ensure you're in the `frontend` directory of the project.
+
+   ```bash
+   cd frontend
+
+2. **Install depnedencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+
+3. **Configure Environment Variables**
+
+   Create a .env file in the frontend directory to store environment variables.
+
+   ```bash
+   Copy code
+   touch .env
+   
+   # Open the .env file in your preferred text editor and add the following
+
+   env
+   Copy code
+   REACT_APP_BACKEND_URL="http://localhost:8080"
+
+ Note: Replace http://localhost:8080 with the actual URL of your backend server if it's hosted elsewhere.
+
+ #### With Docker
+
+If you prefer to use a Docker image (recommended) for deployment follow these steps:
+
+1. **Build the Docker image**
+
+   
