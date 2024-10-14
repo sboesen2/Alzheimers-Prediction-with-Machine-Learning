@@ -11,7 +11,6 @@
 5. [Installation and Setup](#installation-and-setup)
    - [Backend Setup](#backend-setup)
    - [Frontend Setup](#frontend-setup)
-   - [Docker Setup](#docker-setup)
 6. [Running the Application](#running-the-application)
    - [Running the Backend](#running-the-backend)
    - [Running the Frontend](#running-the-frontend)
@@ -21,8 +20,6 @@
 8. [File Structure](#file-structure)
 9. [Contributing](#contributing)
 10. [License](#license)
-11. [Future Features](#future-features)
-12. [Known Issues](#known-issues)
 
 ## Project Overview
 
