@@ -20,6 +20,8 @@
 8. [File Structure](#file-structure)
 9. [Contributing](#contributing)
 10. [License](#license)
+11. [Contact Author](#contact-author)
+
 
 ## Project Overview
 
@@ -281,3 +283,246 @@ Here’s a quick guide to deploying your frontend application on Vercel:
 4. **Deploy the project and access it via the provided URL.**
 
 **Note**: This guide provides a high-level overview. For more detailed instructions, refer to the [Vercel Documentation](https://vercel.com/docs).
+
+## API Endpoints
+
+### POST `/predict`
+
+**Description**: Accepts genetic data and returns a predicted Alzheimer's risk percentage.
+
+- **Request URL**: `http://localhost:8080/predict`
+
+- **Request Headers**: Body and Response
+
+  ```http
+  Content-Type: application/json
+
+   {
+  "snpRiskAllele": "rs12345-A",
+  "pValue": 0.001,
+  "orBeta": 1.5,
+  "riskAlleleFrequency": 0.3,
+  "pValueMlog": 3.0
+   }
+  
+  {
+  "risk": 78.5,
+  "timestamp": "2024-10-14T12:00:00Z"
+  }
+
+### GET `/feature_importance`
+
+**Description**: Returns data used to visualize feature importance via SHAP values.
+
+- **Request URL**: `http://localhost:8080/feature_importance`
+
+```json
+{
+  "feature_importance": {
+    "snpRiskAllele": 0.4,
+    "pValue": 0.3,
+    "orBeta": 0.2,
+    "riskAlleleFrequency": 0.1,
+    "pValueMlog": 0.05
+  }
+}
+
+```
+## File Structure
+
+The project is organized into several key directories and files to maintain a clean and efficient workflow. Below is an overview of the directory structure:
+
+```plaintext
+Alzheimers-Prediction-with-Machine-Learning/
+├── backend/
+├── frontend/
+├── Notebooks/
+├── LICENSE
+├── README.md
+└── .gitignore
+
+
+---
+```
+
+### **Explanation of the Sections:**
+
+1. **File Structure**:
+   - **Plaintext Directory Tree**: Provides a visual representation of the project's main directories and files.
+
+2. **Directory Breakdown**:
+   - **backend/**:
+     - **Description**: Offers a high-level overview of what the backend directory contains and its role in the project.
+   - **frontend/**:
+     - **Description**: Details the contents and purpose of the frontend directory, highlighting its connection to Vercel and the backend.
+   - **Notebooks/**:
+     - **Description**: Explains the purpose of the Jupyter notebooks within the project, emphasizing their role in data analysis and model evaluation.
+   - **LICENSE**:
+     - **Description**: Mentions the licensing of the project.
+   - **README.md**:
+     - **Description**: Indicates that this documentation file provides an overview and instructions.
+   - **.gitignore**:
+     - **Description**: States the purpose of the gitignore file in managing version control.
+
+3. **Additional Notes**:
+   - **Customization**: Encourages users to adjust the descriptions to better fit their actual project structure.
+   - **Sensitive Information**: Reminds users to handle sensitive data securely.
+
+---
+
+### **Customization Tips:**
+
+- **Accurate Descriptions**: Make sure the descriptions for each directory accurately reflect their contents and roles within your project.
+  
+- **Additional Directories**: If your project contains other directories (e.g., `docs/`, `scripts/`, `tests/`), consider adding them with appropriate descriptions.
+
+- **Visual Enhancements**: You can enhance the directory tree with more detailed subdirectories if needed, but since you prefer a high-level overview, the current structure should suffice.
+
+### **Final Note:**
+
+Ensure that all paths and descriptions are accurate and correspond to your project's actual setup. This high-level overview will help contributors and users understand the organization of your project quickly and navigate it efficiently.
+
+Feel free to reach out if you need further assistance or additional sections for your `README.md`!
+
+## Contributing
+
+I appreciate your interest in contributing to the **Alzheimer's Risk Prediction using Machine Learning** project! Your contributions help enhance the project, improve its functionality, and ensure its continued success. Below are the guidelines and steps to help you get started.
+
+### How to Contribute
+
+#### Reporting Issues
+
+If you encounter any bugs or have ideas for improvements, please [open an issue](https://github.com/yourusername/Alzheimers-Prediction-with-Machine-Learning/issues) in the repository. When reporting an issue, please include:
+
+- A clear and descriptive title.
+- A detailed description of the problem or suggestion.
+- Steps to reproduce the issue, if applicable.
+- Any relevant screenshots or logs.
+
+#### Suggesting Enhancements
+
+I welcome suggestions for new features or enhancements. To propose an improvement:
+
+1. Open an issue in the repository.
+2. Provide a clear and descriptive title.
+3. Outline the proposed changes and their benefits.
+4. Include any relevant examples or references.
+
+#### Submitting Pull Requests
+
+Pull requests (PRs) are the best way to propose changes to the project. By submitting a PR, you are suggesting modifications and additions to the codebase.
+
+1. **Ensure the project is up-to-date**: Sync your fork with the latest changes from the main repository to avoid merge conflicts.
+2. **Follow the development workflow**: Refer to the [Development Workflow](#development-workflow) section below.
+3. **Provide a clear description**: In your PR, describe what changes you have made and why they are necessary.
+4. **Reference issues**: If your PR addresses an existing issue, mention it by including `Closes #issue_number` in your PR description.
+
+### Development Workflow
+
+Follow these steps to contribute effectively:
+
+#### Fork the Repository
+
+1. Navigate to the [Alzheimer's Risk Prediction](https://github.com/yourusername/Alzheimers-Prediction-with-Machine-Learning) repository on GitHub.
+2. Click the **Fork** button at the top right to create your own fork of the project.
+
+#### Clone Your Fork
+
+Clone the forked repository to your local machine using Git:
+
+```bash
+git clone https://github.com/yourusername/Alzheimers-Prediction-with-Machine-Learning.git
+cd Alzheimers-Prediction-with-Machine-Learning
+
+```
+#### Create a new branch
+
+```bash
+git checkout -b feature/your-feature-name
+
+```
+#### Commit your changes
+```bash
+git add .
+git commit -m "Add feature: Brief description of your feature"
+
+```
+#### Push toyour fork
+
+```bash
+git push origin feature/your-feature-name
+
+```
+#### Open a pull request
+1. Navigate to your forked repository on GitHub.
+2. Click the Compare & pull request button.
+3. Provide a clear title and description for your PR.
+4. Submit the pull request for review.
+
+### Testing
+
+- **Write Tests**: Ensure that new features and bug fixes include appropriate tests.
+- **Run Tests**: Before submitting a PR, run all tests to ensure they pass.
+
+### Documentation
+
+- **Update README**: If your changes affect the usage or functionality of the project, update the `README.md` accordingly.
+- **Inline Documentation**: Add comments and docstrings to explain complex logic and functionalities within the code.
+
+### Style Guides
+
+Adhering to style guides ensures consistency and improves code quality. Follow the guidelines below based on the programming language you are using.
+
+#### Python
+
+- **PEP 8**: Follow the [PEP 8](https://pep8.org/) style guide for Python code.
+- **Docstrings**: Use docstrings to document modules, classes, and functions.
+
+    ```python
+    def calculate_risk(data):
+        """
+        Calculate Alzheimer's risk based on genetic data.
+        
+        Parameters:
+            data (dict): Genetic data input.
+        
+        Returns:
+            float: Predicted risk percentage.
+        """
+        pass
+    ```
+
+#### JavaScript
+
+- **ESLint**: Use [ESLint](https://eslint.org/) to maintain consistent coding standards.
+- **Prettier**: Integrate [Prettier](https://prettier.io/) for automatic code formatting.
+
+    ```javascript
+    // Example of a well-documented function
+    /**
+     * Calculates the feature importance using SHAP values.
+     *
+     * @param {Object} data - The input data.
+     * @returns {Object} - The feature importance scores.
+     */
+    function calculateFeatureImportance(data) {
+        // Function implementation
+    }
+    ```
+
+### Acknowledgments
+
+- **Inspiration**: Think of good inspirations
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact Author
+
+For any questions, suggestions, or feedback, please contact the author:
+
+- **Name**: Sam Boesen
+- **Email**: sam.boesen2@gmail.com
+- **GitHub**: [sboesen2](https://github.com/sboesen2)
+
