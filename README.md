@@ -328,6 +328,144 @@ Here’s a quick guide to deploying your frontend application on Vercel:
 }
 
 ```
+# GWAS Dataset Documentation
+
+Welcome to the comprehensive documentation for the Genome-Wide Association Studies (GWAS) dataset. This README provides an in-depth overview of the dataset, including detailed explanations of each column, sample data for illustration, and guidance on how to interpret the information. Whether you're a researcher, data scientist, or enthusiast, this guide will help you navigate and utilize the dataset effectively.
+
+---
+
+## Introduction
+
+Genome-Wide Association Studies (GWAS) are pivotal in understanding the genetic basis of complex diseases and traits. This dataset compiles results from various GWAS, providing valuable insights into the associations between genetic variants and specific phenotypes. This documentation serves as a comprehensive guide to understanding and utilizing the dataset effectively.
+
+## Dataset Description
+
+The GWAS dataset encompasses a wide range of studies investigating the genetic underpinnings of various diseases and traits. Each entry in the dataset corresponds to a specific genetic variant (Single Nucleotide Polymorphism or SNP) associated with a particular trait or disease. The dataset includes detailed metadata from the studies, such as sample sizes, genomic locations, statistical significance, and biological implications.
+
+### Key Features
+
+- **Comprehensive Coverage:** Includes multiple studies across different diseases and traits.
+- **Detailed Metadata:** Each SNP is annotated with extensive information, facilitating in-depth analysis.
+- **Sample and Replication Data:** Provides both initial and replication sample sizes for robust validation.
+- **Genomic Context:** Information on chromosomal locations, gene mappings, and variant types.
+- **Statistical Significance:** P-values and effect sizes to assess the strength of associations.
+
+## Column Definitions
+
+Understanding each column is crucial for effectively utilizing the dataset. Below is a detailed explanation of each column included in the dataset:
+
+| **Column Name**                  | **Description**                                                                                                                                                        |
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **DATE ADDED TO CATALOG**        | The date when the entry was added to the catalog.                                                                                                                      |
+| **PUBMEDID**                     | PubMed identifier for the study.                                                                                                                                         |
+| **FIRST AUTHOR**                 | The first author of the study.                                                                                                                                           |
+| **DATE**                         | The publication date of the study.                                                                                                                                       |
+| **JOURNAL**                      | The journal where the study was published.                                                                                                                                |
+| **LINK**                         | URL link to the study's PubMed page.                                                                                                                                    |
+| **STUDY**                        | Title of the study.                                                                                                                                                      |
+| **DISEASE/TRAIT**                | The disease or trait investigated in the study.                                                                                                                          |
+| **INITIAL SAMPLE SIZE**          | Description of the initial sample size, including demographics.                                                                                                           |
+| **REPLICATION SAMPLE SIZE**      | Sample size used for replication, if applicable.                                                                                                                         |
+| **REGION**                       | Chromosomal region where the SNP is located.                                                                                                                             |
+| **CHR_ID**                       | Chromosome identifier.                                                                                                                                                   |
+| **CHR_POS**                      | Chromosomal position of the SNP.                                                                                                                                            |
+| **REPORTED GENE(S)**             | Genes reported in association with the SNP.                                                                                                                                |
+| **MAPPED_GENE**                  | Genes mapped to the SNP.                                                                                                                                                  |
+| **UPSTREAM_GENE_ID**             | Gene ID upstream of the SNP.                                                                                                                                                |
+| **DOWNSTREAM_GENE_ID**           | Gene ID downstream of the SNP.                                                                                                                                              |
+| **SNP_GENE_IDS**                 | Associated gene IDs for the SNP.                                                                                                                                           |
+| **UPSTREAM_GENE_DISTANCE**       | Distance to the upstream gene (in base pairs).                                                                                                                            |
+| **DOWNSTREAM_GENE_DISTANCE**     | Distance to the downstream gene (in base pairs).                                                                                                                          |
+| **STRONGEST SNP-RISK ALLELE**    | The SNP with the strongest association and its risk allele.                                                                                                              |
+| **SNPS**                         | SNP identifier(s).                                                                                                                                                       |
+| **MERGED**                       | Indicator if the SNP has been merged with other SNPs.                                                                                                                     |
+| **SNP_ID_CURRENT**               | Current identifier for the SNP.                                                                                                                                           |
+| **CONTEXT**                      | Contextual information about the SNP variant.                                                                                                                              |
+| **INTERGENIC**                   | Indicates if the SNP is intergenic (located between genes).                                                                                                               |
+| **RISK ALLELE FREQUENCY**        | Frequency of the risk allele in the population.                                                                                                                           |
+| **P-VALUE**                      | P-value indicating the statistical significance of the association.                                                                                                       |
+| **PVALUE_MLOG**                  | -log10 transformed P-value for easier interpretation of significance levels.                                                                                            |
+| **P-VALUE (TEXT)**               | P-value represented in text format.                                                                                                                                       |
+| **OR or BETA**                   | Odds Ratio (OR) or Beta coefficient indicating the effect size of the SNP.                                                                                               |
+| **95% CI (TEXT)**                | 95% Confidence Interval for the OR or Beta.                                                                                                                              |
+| **PLATFORM [SNPS PASSING QC]**    | Genotyping platform used and the number of SNPs passing Quality Control (QC).                                                                                            |
+| **CNV**                          | Copy Number Variation information, if applicable.                                                                                                                          |
+| **MAPPED_TRAIT**                 | Standardized trait mapped to the study's phenotype.                                                                                                                       |
+| **MAPPED_TRAIT_URI**             | URI link to the standardized trait definition.                                                                                                                            |
+| **STUDY ACCESSION**              | Accession number for the study in the GWAS catalog.                                                                                                                      |
+| **GENOTYPING TECHNOLOGY**        | Technology used for genotyping in the study.                                                                                                                              |
+| **Gene_Key**                     | Key identifier for the gene involved.                                                                                                                                      |
+| **Entry**                        | Entry identifier in the database.                                                                                                                                          |
+| **Reviewed**                     | Indicator if the entry has been reviewed.                                                                                                                                    |
+| **Entry Name**                   | Name of the entry in the database.                                                                                                                                          |
+| **Protein names**                | Proteins encoded by the mapped gene(s).                                                                                                                                     |
+| **Gene Names**                   | Official names of the genes involved.                                                                                                                                      |
+| **Organism**                     | Organism studied (e.g., Homo sapiens).                                                                                                                                     |
+| **Length**                       | Length of the gene or genomic region.                                                                                                                                      |
+| **Involvement in disease**       | Description of how the gene is involved in the disease.                                                                                                                   |
+| **Sequence_y**                   | Additional sequence information related to the SNP or gene.                                                                                                               |
+
+## Sample Data
+
+To illustrate the structure and content of the dataset, below is a subset of a sample entry:
+
+| DATE ADDED TO CATALOG | PUBMEDID | FIRST AUTHOR | DATE      | JOURNAL | LINK                                                        | STUDY                                                                                                                                           | DISEASE/TRAIT                    | INITIAL SAMPLE SIZE                                                                                                                                                             | REPLICATION SAMPLE SIZE | REGION | CHR_ID | CHR_POS  | REPORTED GENE(S) | MAPPED_GENE      | UPSTREAM_GENE_ID | DOWNSTREAM_GENE_ID | SNP_GENE_IDS | UPSTREAM_GENE_DISTANCE | DOWNSTREAM_GENE_DISTANCE | STRONGEST SNP-RISK ALLELE | SNPS       | MERGED | SNP_ID_CURRENT | CONTEXT            | INTERGENIC | RISK ALLELE FREQUENCY | P-VALUE | PVALUE_MLOG | P-VALUE (TEXT) | OR or BETA | 95% CI (TEXT)          | PLATFORM [SNPS PASSING QC]     | CNV | MAPPED_TRAIT                | MAPPED_TRAIT_URI                              | STUDY ACCESSION | GENOTYPING TECHNOLOGY      | Gene_Key        | Entry  | Reviewed | Entry Name | Protein names | Gene Names    | Organism | Length | Involvement in disease | Sequence_y |
+|-----------------------|----------|--------------|-----------|---------|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|--------|--------|----------|-------------------|-------------------|-------------------|---------------------|--------------|------------------------|--------------------------|----------------------------|------------|--------|-----------------|--------------------|------------|-----------------------|---------|-------------|-----------------|------------|------------------------|---------------------------------|-----|-----------------------------|----------------------------------------------|-----------------|-----------------------------|-----------------|--------|----------|------------|---------------|---------------|----------|--------|------------------------|------------|
+| 6/16/2016             | 26268530 | Ramanan VK   | 8/11/2015 | Brain   | [Link](https://www.ncbi.nlm.nih.gov/pubmed/26268530)       | GWAS of longitudinal amyloid accumulation on 18F-florbetapir PET in Alzheimer's disease implicates microglial activation gene IL1RAP.               | Longitudinal change in brain amyloid plaque burden | "41 European ancestry Alzheimer's disease cases, 294 European ancestry Mild Cognitive Impairment cases, 160 European ancestry cognitively normal individuals" | Unknown                 | 1q44  | 1      | 244753317 | intergenic       | C1orf202 - COX20   | ENSG00000284188    | ENSG00000203667      | Unknown      | 22302                  | 82299                    | rs7534801-?                | rs7534801 | 0      | 7534801         | intergenic_variant | 1          | 0.21                  | 3e-06   | 5.5229      | 5.522878745280337 | Unknown    | [0.29-0.73] unit decrease | Illumina [6112217] (imputed) | N   | amyloid plaque accumulation rate | [EFO_0007646](http://www.ebi.ac.uk/efo/EFO_0007646) | GCST003082      | Genome-wide genotyping array | C1orf202 - COX20 | Unknown | Unknown  | Unknown    | Unknown       | Unknown_Gene  | Unknown  | -1     | Unknown                | Unknown    |
+
+### Sample Entry Breakdown
+
+Let's dissect the sample entry to understand the dataset's structure and the meaning of each field.
+
+- **Study Information:**
+  - **PubMed ID:** 26268530
+  - **First Author:** Ramanan VK
+  - **Publication Date:** August 11, 2015
+  - **Journal:** Brain
+  - **Study Title:** GWAS of longitudinal amyloid accumulation on 18F-florbetapir PET in Alzheimer's disease implicates microglial activation gene IL1RAP.
+  - **Link:** [PubMed Study](https://www.ncbi.nlm.nih.gov/pubmed/26268530)
+
+- **Trait and Samples:**
+  - **Disease/Trait:** Longitudinal change in brain amyloid plaque burden
+  - **Initial Sample Size:** 41 European ancestry Alzheimer's disease cases, 294 European ancestry Mild Cognitive Impairment cases, 160 European ancestry cognitively normal individuals
+  - **Replication Sample Size:** Unknown
+
+- **Genetic Variant Details:**
+  - **Chromosomal Location:** Chromosome 1q44 at position 244,753,317
+  - **Reported Gene:** Intergenic region near C1orf202 - COX20
+  - **Mapped Gene:** C1orf202 - COX20
+  - **SNP Identifier:** rs7534801
+  - **Variant Type:** Intergenic variant
+  - **Risk Allele Frequency:** 0.21
+  - **P-Value:** 3e-06 (M-log P-Value: 5.5229)
+  - **Effect Size:** OR or Beta is Unknown with a 95% CI of [0.29-0.73] unit decrease
+  - **Genotyping Platform:** Illumina [6112217] (imputed)
+
+- **Additional Information:**
+  - **Mapped Trait URI:** [EFO_0007646](http://www.ebi.ac.uk/efo/EFO_0007646)
+  - **Study Accession:** GCST003082
+  - **Organism:** Unknown
+  - **Sequence Information:** Unknown
+
+This entry illustrates how each SNP is associated with a specific trait, providing details about its genomic context, statistical significance, and potential biological implications.
+
+## Usage Examples
+
+Below are examples of how you can utilize the GWAS dataset in your research or projects.
+
+### Loading the Dataset
+
+```python
+import pandas as pd
+
+# Load the dataset
+gwas_data = pd.read_csv('path_to_gwas_dataset.csv')
+
+# Display the first few rows
+print(gwas_data.head())
+
+
+```
 ## File Structure
 
 The project is organized into several key directories and files to maintain a clean and efficient workflow. Below is an overview of the directory structure:
