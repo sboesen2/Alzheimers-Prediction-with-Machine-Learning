@@ -22,8 +22,9 @@
 10. [File Structure](#file-structure)
 11. [Future Work](#future-work)
 12. [Contributing](#contributing)
-13. [License](#license)
-14. [Contact Author](#contact-author)
+13. [Acknowledgements ](#acknowledgements )
+14. [License](#license)
+15. [Contact Author](#contact-author)
 
 
 ## Project Overview
@@ -795,7 +796,7 @@ Adhering to style guides ensures consistency and improves code quality. Follow t
     }
     ```
 
-### Acknowledgments
+### Acknowledgements
 
 - **Inspiration**: I created this project after coming to a realization. There is a problem in the life sciences industry which is locked behind large, expensive paywalls, and beyond those paywalls 
   lie mountains of proprietary data and tools. Now this has improved since years prior, but the vast majority of publicly available, useful medical data is and will be for some time... complete shit.
