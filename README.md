@@ -20,9 +20,10 @@
 8. [GWAS Dataset Documentation](#gwas-dataset-documentation)
 9. [Model Details](#model-details)
 10. [File Structure](#file-structure)
-11. [Contributing](#contributing)
-12. [License](#license)
-13. [Contact Author](#contact-author)
+11. [Future Work](#future-work)
+12. [Contributing](#contributing)
+13. [License](#license)
+14. [Contact Author](#contact-author)
 
 
 ## Project Overview
@@ -619,19 +620,56 @@ Alzheimers-Prediction-with-Machine-Learning/
   
 - **Additional Directories**: If your project contains other directories (e.g., `docs/`, `scripts/`, `tests/`), consider adding them with appropriate descriptions.
 
-- **Visual Enhancements**: You can enhance the directory tree with more detailed subdirectories if needed, but since you prefer a high-level overview, the current structure should suffice.
+- **Visual Enhancements**: You can enhance the directory tree with more detailed subdirectories if needed, but since this is a high-level overview, the current structure should suffice.
 
-### **Final Note:**
+## Future Work
 
-Ensure that all paths and descriptions are accurate and correspond to your project's actual setup. This high-level overview will help contributors and users understand the organization of your project quickly and navigate it efficiently.
+While significant progress has been made in developing and deploying the Alzheimer's risk prediction model, there are several areas where further enhancements can be made. As a junior in college, I recognize my current limitations in software and web development. I welcome contributions and suggestions from the community to help address these challenges and improve the project. Below are the key areas for future development:
 
-Feel free to reach out if you need further assistance or additional sections for your `README.md`!
+1. **Advanced Model Interpretability**
+    - **SHAP Values and Explainability:**
+        - **Current Status:** I have explored using SHAP values and other explainability tools to interpret the model's predictions. However, I was unable to integrate these visualizations into the production environment.
+        - **Desired Enhancement:** Implement interactive SHAP value visualizations within the web application to provide users with deeper insights into feature importance and model decisions.
+        - **How You Can Help:** Assistance with deploying SHAP explanations on the frontend, integrating explainable AI libraries, or developing interactive plots.
+
+2. **API Enhancements**
+    - **Current Status:** The existing API is simple and functional but lacks advanced features and scalability.
+    - **Desired Enhancement:** Develop a more robust API with endpoints for model interpretability, batch predictions, and real-time updates.
+    - **How You Can Help:** Expertise in API development using frameworks like FastAPI or Flask, optimizing API performance, and adding new endpoints.
+
+3. **User Interface Improvements**
+    - **Current Status:** The frontend is basic and may not provide the best user experience.
+    - **Desired Enhancement:** Enhance the user interface with better design, responsive layouts, and additional functionalities such as interactive dashboards.
+    - **How You Can Help:** Frontend development skills using React, Vue, or other modern frameworks; UI/UX design expertise; and experience with visualization libraries like D3.js or Plotly.
+
+4. **Feature Expansion**
+    - **Current Status:** Limited to current features; additional features could provide more value to users.
+    - **Desired Enhancement:** Incorporate more GWAS data, additional predictive features, and integrate other machine learning models for comparison.
+    - **How You Can Help:** Data engineering, feature engineering, and machine learning expertise to expand the feature set and explore alternative models.
+
+5. **Deployment and Scalability**
+    - **Current Status:** Deployment is basic and may not handle high traffic or large-scale data efficiently.
+    - **Desired Enhancement:** Improve the deployment strategy to ensure scalability, reliability, and security. Consider containerization, cloud deployment, and load balancing.
+    - **How You Can Help:** Knowledge in DevOps, cloud platforms (AWS, GCP, Azure), Docker, Kubernetes, and CI/CD pipelines.
+
+6. **Documentation and Testing**
+    - **Current Status:** Documentation is comprehensive, but testing coverage can be improved.
+    - **Desired Enhancement:** Develop thorough unit and integration tests to ensure code reliability and maintainability.
+    - **How You Can Help:** Experience in writing automated tests, setting up testing frameworks, and enhancing documentation with more examples and tutorials.
+
+7. **Community Engagement**
+    - **Current Status:** Limited community involvement and user feedback.
+    - **Desired Enhancement:** Foster a community around the project to gather feedback, encourage contributions, and facilitate collaboration.
+    - **How You Can Help:** Promote the project on social media, write blog posts, organize webinars or workshops, and engage with contributors.
 
 ## Contributing
 
 I appreciate your interest in contributing to the **Alzheimer's Risk Prediction using Machine Learning** project! Your contributions help enhance the project, improve its functionality, and ensure its continued success. Below are the guidelines and steps to help you get started.
 
 ### How to Contribute
+
+If you're interested in helping improve the project, feel free to open issues, submit pull requests, or reach out directly. Your contributions, no matter how small, can make a significant difference in advancing this project.
+
 
 #### Reporting Issues
 
