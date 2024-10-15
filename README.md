@@ -331,7 +331,7 @@ Here’s a quick guide to deploying your frontend application on Vercel:
 ```
 # GWAS Dataset Documentation
 
-Welcome to the comprehensive documentation for the Genome-Wide Association Studies (GWAS) dataset. This README provides an in-depth overview of the dataset, including detailed explanations of each column, sample data for illustration, and guidance on how to interpret the information. Whether you're a researcher, data scientist, or enthusiast, this guide will help you navigate and utilize the dataset effectively.
+Welcome to the comprehensive documentation for the Genome-Wide Association Studies (GWAS) dataset. This README provides an in-depth overview of the dataset, including detailed explanations of each column, a sample data entry for illustration, and guidance on how to interpret the information. Whether you're a researcher, data scientist, or enthusiast, this guide will help you navigate and utilize the dataset effectively.
 
 ---
 
@@ -449,6 +449,109 @@ Let's dissect the sample entry to understand the dataset's structure and the mea
   - **Sequence Information:** Unknown
 
 This entry illustrates how each SNP is associated with a specific trait, providing details about its genomic context, statistical significance, and potential biological implications.
+
+## Model Details
+
+This section provides a comprehensive overview of the machine learning model developed to predict the risk of Alzheimer's disease based on GWAS data. The model leverages an XGBoost classifier within a robust preprocessing pipeline to handle various data types and ensure optimal performance.
+
+### Model Architecture
+
+- **Type of Model:** XGBoost Classifier
+- **Preprocessing Pipeline:**
+  - **Numeric Features:**
+    - **Features:** `P-VALUE`, `OR or BETA`, `PVALUE_MLOG`
+    - **Imputation:** Missing values are imputed using the mean strategy.
+    - **Scaling:** Features are standardized using `StandardScaler`.
+  - **Categorical Features:**
+    - **Features:** `STRONGEST SNP-RISK ALLELE`
+    - **Imputation:** Missing values are filled with the constant value `'missing'`.
+    - **Encoding:** Categorical variables are encoded using `OneHotEncoder` with `handle_unknown='ignore'`.
+  - **Special Numeric Features:**
+    - **Features:** `RISK ALLELE FREQUENCY`
+    - **Imputation:** Missing values (originally marked as `'NR'`) are filled with `-1`.
+    - **Scaling:** Features are standardized using `StandardScaler`.
+- **Classifier:**
+  - **Algorithm:** XGBoost (`XGBClassifier`)
+  - **Parameters:**
+    - `eval_metric='logloss'`
+    - `random_state=42`
+
+### Hyperparameters
+
+The model utilizes a range of hyperparameters tuned using `RandomizedSearchCV` to optimize performance. Below are the hyperparameters considered and their selected values:
+
+| **Hyperparameter**            | **Values Explored**          | **Selected Value**          |
+|-------------------------------|------------------------------|------------------------------|
+| `classifier__n_estimators`    | [100, 200, 300]              | *Best value from search*     |
+| `classifier__max_depth`       | [3, 4, 5]                     | *Best value from search*     |
+| `classifier__learning_rate`   | [0.01, 0.1, 0.2]              | *Best value from search*     |
+| `classifier__subsample`       | [0.8, 0.9, 1.0]               | *Best value from search*     |
+| `classifier__colsample_bytree` | [0.8, 0.9, 1.0]               | *Best value from search*     |
+| `classifier__scale_pos_weight` | [Calculated based on class weights] | *Best value from search*     |
+
+**Hyperparameter Tuning Process:**
+
+- **Method:** Randomized Search with Cross-Validation
+- **Number of Iterations:** 10
+- **Cross-Validation Strategy:** 5-fold cross-validation
+- **Random State:** 42 for reproducibility
+- **Number of Jobs:** -1 (utilizes all available processors)
+
+### Training Process
+
+1. **Data Loading:**
+   - The dataset is loaded from a CSV file located at:
+     ```
+     C:\Your\File\Location
+     ```
+
+2. **Target Variable Creation:**
+   - A binary target variable `is_alzheimers` is created by checking if the `MAPPED_TRAIT` column contains the substring `'Alzheimer'`.
+
+3. **Feature Selection:**
+   - Selected features for the model:
+     - `STRONGEST SNP-RISK ALLELE`
+     - `P-VALUE`
+     - `OR or BETA`
+     - `RISK ALLELE FREQUENCY`
+     - `PVALUE_MLOG`
+
+4. **Data Cleaning:**
+   - The `RISK ALLELE FREQUENCY` column contains `'NR'` values, which are replaced with `NaN` and then converted to numeric, coercing errors to `NaN`.
+
+5. **Preprocessing:**
+   - **Numeric Features:** Imputed with mean and scaled.
+   - **Categorical Features:** Imputed with `'missing'` and one-hot encoded.
+   - **Special Numeric Features (`RISK ALLELE FREQUENCY`):** Imputed with `-1` and scaled.
+
+6. **Pipeline Construction:**
+   - A `Pipeline` is created combining the preprocessing steps and the XGBoost classifier.
+
+7. **Data Splitting:**
+   - The dataset is split into training and testing sets with an 80-20 split using `train_test_split` with `random_state=42` for reproducibility.
+
+8. **Class Weight Calculation:**
+   - Class weights are calculated to address any class imbalance in the target variable.
+
+9. **Hyperparameter Tuning:**
+   - `RandomizedSearchCV` is used to explore the hyperparameter space and identify the best combination of parameters based on cross-validation performance.
+
+10. **Model Training:**
+    - The best estimator from the randomized search is fitted on the training data.
+
+### Evaluation Metrics
+
+The model's performance is evaluated using the following metrics:
+
+- **Classification Report:** Provides precision, recall, F1-score, and support for each class.
+- **Confusion Matrix:** Shows the number of true positives, true negatives, false positives, and false negatives.
+- **ROC-AUC Score:** Measures the model's ability to distinguish between classes.
+- **Cross-Validation ROC-AUC Scores:** Assesses the model's performance across different folds to ensure consistency.
+
+**Sample Evaluation Output:**
+
+
+
 
 ## Usage Examples
 
