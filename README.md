@@ -673,7 +673,7 @@ If you're interested in helping improve the project, feel free to open issues, s
 
 #### Reporting Issues
 
-If you encounter any bugs or have ideas for improvements, please [open an issue](https://github.com/yourusername/Alzheimers-Prediction-with-Machine-Learning/issues) in the repository. When reporting an issue, please include:
+If you encounter any bugs or have ideas for improvements, please [open an issue](https://github.com/sboesen2/Alzheimers-Prediction-with-Machine-Learning/issues) in the repository. When reporting an issue, please include:
 
 - A clear and descriptive title.
 - A detailed description of the problem or suggestion.
@@ -704,7 +704,7 @@ Follow these steps to contribute effectively:
 
 #### Fork the Repository
 
-1. Navigate to the [Alzheimer's Risk Prediction](https://github.com/yourusername/Alzheimers-Prediction-with-Machine-Learning) repository on GitHub.
+1. Navigate to the [Alzheimer's Risk Prediction](https://github.com/sboesen2/Alzheimers-Prediction-with-Machine-Learning) repository on GitHub.
 2. Click the **Fork** button at the top right to create your own fork of the project.
 
 #### Clone Your Fork
