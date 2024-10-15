@@ -18,10 +18,11 @@
    - [POST /predict](#post-predict)
    - [GET /feature_importance](#get-feature_importance)
 8. [GWAS Dataset Documentation](#gwas-dataset-documentation)
-9. [File Structure](#file-structure)
-10. [Contributing](#contributing)
-11. [License](#license)
-12. [Contact Author](#contact-author)
+9. [Model Details](#model-details)
+10. [File Structure](#file-structure)
+11. [Contributing](#contributing)
+12. [License](#license)
+13. [Contact Author](#contact-author)
 
 
 ## Project Overview
