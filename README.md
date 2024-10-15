@@ -32,6 +32,8 @@
 
 **Goal of the App**: To empower individuals and healthcare professionals with predictive analytics for early detection and prevention strategies related to Alzheimer's disease.
 
+![Landing Page](images/landing_page.png)
+
 **Live Demo**: You can try out the application here:
 
 👉 **[Alzheimer's Risk Prediction App](https://alzheimerspredictionfrontend-fbwful15c-sam-boesens-projects.vercel.app/)** 👈
@@ -455,6 +457,8 @@ This entry illustrates how each SNP is associated with a specific trait, providi
 ## Model Details
 
 This section provides a comprehensive overview of the machine learning model developed to predict the risk of Alzheimer's disease based on GWAS data. The model leverages an XGBoost classifier within a robust preprocessing pipeline to handle various data types and ensure optimal performance.
+
+![Prediction Input Form](images/prediction_form.png)
 
 ### Model Architecture
 
