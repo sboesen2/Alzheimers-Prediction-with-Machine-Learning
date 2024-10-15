@@ -797,8 +797,34 @@ Adhering to style guides ensures consistency and improves code quality. Follow t
 
 ### Acknowledgments
 
-- **Inspiration**: Think of good inspirations
+- **Inspiration**: I created this projet after coming to a reazlization. There is a problem in the life sciences industry which is locked behind large, expensive paywalls and beyond those paywalls 
+  lie mountains of propietary data and tools. Now this has improved since years prior, but the vast majority of publicly avaible, useful medical data is and will be for some time... complete shit.
+  Some believe this makes senss becasue why would a ccompany release their data that investors are counting on for a return to the public? Yes, this is true but when the entire industry is doing it
+  we create a bunch of mediocre tools that are trained on a small section of decent data. This leads to overfitting and decreased generalizability towards their target market. I believe there
+  needs to be a dramtic shift in the way that we view science as an industry and as academia. Academic insitutions stress individual work and publications far too much creating what many know as the
+  "Publish or Perish" dilema. This is horrible for the industry and should be an embarssment to the integrity of the science that many dedicate their lives to. This mentality leads to fradulent
+  science and falsified data adn is probably why we have seen a spike in retracted papers in the past decade. This will be detrimental to us in the long run. The ability for a researcher to publish
+  X amount of papers in their four years at a university does not define them as a scientist.It also does not directly correlate that someone will be a good fit if they want to move into industry.
+  In the BioPharma and Biotech industry, collaboration and teamwork are valued much higher as eveyrone is working to devlop a drug or new form of treatment. Yet another trait that is notstressed by
+  academic unbiversities for some reason. And this is where the problem lies. Academic institutions are not preparing their scientists for the enxt genreation of science
 
+  This leads me to believe that the current hype surrounding AI/ML is propped up on hundreds of millions of dollars of poor investment strategy, lackluster data, and overly optimistic returns. Open AI has lost
+  around five billion dollars this years and should be telling of the future of AI coming up. They have created argubably the best smart search engine ever yet they have no real business use
+  for their product. This is a scary sign for the indsutry which brings me to what I said ealier about the large majority of data espeically in the life sciecnes industry is crap. Machine learning models
+  require structured, oftentimes tabular data which is not often avaiable becasue all of the good data is sitting in lab notebook written in some scientist's chicken scratch handwriting. This data has to
+  then be trasnformed and preprocessed in a way that a machine can learn form it. Now those that have done this know it is a painstaking process and can also mean that some of the data's integrity is messed
+  up in the process. This will create a model that over fits or is has no generalizability. And there lies the cusp of our dilema. We have a handful of companies all competing for investors and return, and every single
+  one of them is doing it all on their own. each one with their own promise of a new molecular target or drug efficacy. Now I am not saying that they all need to work together becuse I know that will never happen, but
+  the most important things that I learned from this project was that you can't do it alone
+
+  I would have finshed this entire proejct in two weeks if I had a team but becuase I did eveyrthing on my own my timeline dragged severly. There is no way to know eveyrhtign that entails an end to end bioinformaticts
+  project. Much like those in academia have no way to know everything about their research or publication processes. And much like a Pharmaceuticl R & D scientists does not know every aspect of their piepline. There is not a
+  single person who came into this indsutry and suceeded without leaning to a mentor or another leader for guidance at some point. Learnign and collaboration are the most important skills for success in life sciecnes and is the reason
+  I have decided to make this project compeltly open source. I have included everything that could be useful towards the possible devlopemnt of resarch in the nerudegenreativge disease space. If there is even a single researcher, student,
+  or person that gains some new information on this topic then all of it was worth it. It is my firm beief that open source science can be the catalyzer that drives true innovation, and I will do anything in my power to ensure that
+  life saving data is brought out of the dark, cavernous depths of scientfic labs and into the hands of the public that truly needs them.
+
+  
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
