@@ -93,7 +93,7 @@ If you'd like to run the application locally or explore the code further, follow
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/alzheimers-risk-prediction.git
+   git clone https://github.com/sboesen2/Alzheimers-Prediction-with-Machine-Learning.git
    cd alzheimers-risk-prediction/backend
    
 2. **Create a Virtual Environment**
@@ -155,7 +155,7 @@ When you are ready to deploy you should use a Docker image to containerize the a
 
 ### Running the Frontend
 
-The frontend for this we app was deployed on vercel which will explained below. It is also important to note that local testing is often an important part of the devlopment process as well so that will be documnented as well:
+The frontend for this web application was deployed on vercel which will explained below. It is also important to note that local testing is often an important part of the devlopment process as well so that will be documnented also:
 
 #### Without Docker
 
@@ -190,7 +190,7 @@ If you prefer to run the frontend locally without using Docker, follow these ste
    REACT_APP_BACKEND_URL="http://localhost:8080"
 
  Note: Replace http://localhost:8080 with the actual URL of your backend server if it's hosted elsewhere.
- Note 2.0: This is really only usefull during local testing and devlopment. Cloud deployment should be done 
+ This is really only usefull during local testing and devlopment. Cloud deployment should be done 
  using docker
 
 
