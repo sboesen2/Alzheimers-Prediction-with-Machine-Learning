@@ -648,7 +648,7 @@ While significant progress has been made in developing and deploying the Alzheim
 
 4. **Feature Expansion**
     - **Current Status:** Limited to current features; additional features could provide more value to users.
-    - **Desired Enhancement:** Incorporate more GWAS data, additional predictive features, and integrate other machine learning models for comparison.
+    - **Desired Enhancement:** Incorporate more GWAS data, and additional predictive features, and integrate other machine learning models for comparison.
     - **How You Can Help:** Data engineering, feature engineering, and machine learning expertise to expand the feature set and explore alternative models.
 
 5. **Deployment and Scalability**
@@ -740,7 +740,7 @@ git push origin feature/your-feature-name
 ```
 #### Open a pull request
 1. Navigate to your forked repository on GitHub.
-2. Click the Compare & pull request button.
+2. Click the Compare & Pull Request button.
 3. Provide a clear title and description for your PR.
 4. Submit the pull request for review.
 
@@ -797,32 +797,32 @@ Adhering to style guides ensures consistency and improves code quality. Follow t
 
 ### Acknowledgments
 
-- **Inspiration**: I created this projet after coming to a reazlization. There is a problem in the life sciences industry which is locked behind large, expensive paywalls and beyond those paywalls 
-  lie mountains of propietary data and tools. Now this has improved since years prior, but the vast majority of publicly avaible, useful medical data is and will be for some time... complete shit.
-  Some believe this makes senss becasue why would a ccompany release their data that investors are counting on for a return to the public? Yes, this is true but when the entire industry is doing it
+- **Inspiration**: I created this project after coming to a realization. There is a problem in the life sciences industry which is locked behind large, expensive paywalls, and beyond those paywalls 
+  lie mountains of proprietary data and tools. Now this has improved since years prior, but the vast majority of publicly available, useful medical data is and will be for some time... complete shit.
+  Some believe this makes sense because why would a company release their data that investors are counting on for a return to the public? Yes, this is true but when the entire industry is doing it
   we create a bunch of mediocre tools that are trained on a small section of decent data. This leads to overfitting and decreased generalizability towards their target market. I believe there
-  needs to be a dramtic shift in the way that we view science as an industry and as academia. Academic insitutions stress individual work and publications far too much creating what many know as the
-  "Publish or Perish" dilema. This is horrible for the industry and should be an embarssment to the integrity of the science that many dedicate their lives to. This mentality leads to fradulent
-  science and falsified data adn is probably why we have seen a spike in retracted papers in the past decade. This will be detrimental to us in the long run. The ability for a researcher to publish
-  X amount of papers in their four years at a university does not define them as a scientist.It also does not directly correlate that someone will be a good fit if they want to move into industry.
-  In the BioPharma and Biotech industry, collaboration and teamwork are valued much higher as eveyrone is working to devlop a drug or new form of treatment. Yet another trait that is notstressed by
-  academic unbiversities for some reason. And this is where the problem lies. Academic institutions are not preparing their scientists for the enxt genreation of science
+  needs to be a dramatic shift in how we view science as an industry and academia. Academic institutions stress individual work and publications far too much creating what many know as the
+  "Publish or Perish" dilemma. This is horrible for the industry and should be an embarrassment to the integrity of the science that many dedicate their lives to. This mentality leads to fraudulent
+  science and falsified data and is probably why we have seen a spike in retracted papers in the past decade. This will be detrimental to us in the long run. The ability for a researcher to publish
+  X amount of papers in their four years at a university does not define them as scientists. It also does not directly correlate that someone will be a good fit if they want to move into industry.
+  In the BioPharma and Biotech industry, collaboration and teamwork are valued much higher as everyone is working to develop a drug or new form of treatment. Yet another trait that is not stressed by
+  academic universities for some reason. And this is where the problem lies. Academic institutions are not preparing their scientists for the next generation of science
 
   This leads me to believe that the current hype surrounding AI/ML is propped up on hundreds of millions of dollars of poor investment strategy, lackluster data, and overly optimistic returns. Open AI has lost
-  around five billion dollars this years and should be telling of the future of AI coming up. They have created argubably the best smart search engine ever yet they have no real business use
-  for their product. This is a scary sign for the indsutry which brings me to what I said ealier about the large majority of data espeically in the life sciecnes industry is crap. Machine learning models
-  require structured, oftentimes tabular data which is not often avaiable becasue all of the good data is sitting in lab notebook written in some scientist's chicken scratch handwriting. This data has to
-  then be trasnformed and preprocessed in a way that a machine can learn form it. Now those that have done this know it is a painstaking process and can also mean that some of the data's integrity is messed
-  up in the process. This will create a model that over fits or is has no generalizability. And there lies the cusp of our dilema. We have a handful of companies all competing for investors and return, and every single
-  one of them is doing it all on their own. each one with their own promise of a new molecular target or drug efficacy. Now I am not saying that they all need to work together becuse I know that will never happen, but
-  the most important things that I learned from this project was that you can't do it alone
+  around five billion dollars this year and should be telling of the future of AI. They have created arguably the best smart search engine ever yet they have no real business use
+  for their product. This is a scary sign for the industry which brings me to what I said earlier about the large majority of data, especially in the life sciences industry is crap. Machine learning models
+  require structured, oftentimes tabular data which is not often available because all of the good data is sitting in a lab notebook written in some scientist's chicken scratch handwriting. This data has to
+  then be transformed and preprocessed in a way that a machine can learn from it. Now those who have done this know it is a painstaking process and can also mean that some of the data's integrity is messed
+  up in the process. This will create a model that overfits or has no generalizability. And there lies the cusp of our dilemma. We have a handful of companies all competing for investors and returns, and every single
+  one of them is doing it all on their own. each one with its own promise of a new molecular target or drug efficacy. Now I am not saying that they all need to work together because I know that will never happen, but
+  the most important thing that I learned from this project was that you can't do it alone
 
-  I would have finshed this entire proejct in two weeks if I had a team but becuase I did eveyrthing on my own my timeline dragged severly. There is no way to know eveyrhtign that entails an end to end bioinformaticts
-  project. Much like those in academia have no way to know everything about their research or publication processes. And much like a Pharmaceuticl R & D scientists does not know every aspect of their piepline. There is not a
-  single person who came into this indsutry and suceeded without leaning to a mentor or another leader for guidance at some point. Learnign and collaboration are the most important skills for success in life sciecnes and is the reason
-  I have decided to make this project compeltly open source. I have included everything that could be useful towards the possible devlopemnt of resarch in the nerudegenreativge disease space. If there is even a single researcher, student,
-  or person that gains some new information on this topic then all of it was worth it. It is my firm beief that open source science can be the catalyzer that drives true innovation, and I will do anything in my power to ensure that
-  life saving data is brought out of the dark, cavernous depths of scientfic labs and into the hands of the public that truly needs them.
+  I would have finished this entire project in two weeks if I had a team but because I did everything on my own my timeline dragged severely. There is no way to know everything that entails an end-to-end bioinformatics
+  project. Much like those in academia have no way to know everything about their research or publication processes. And much like Pharmaceutical R & D scientists do not know every aspect of their pipeline. There is not a
+  single person who came into this industry and succeeded without leaning on a mentor or another leader for guidance at some point. Learning and collaboration are the most important skills for success in life sciences and are the reason
+  I have decided to make this project completely open-source. I have included everything that could be useful for the possible development of research in the Neurodegenerative disease space. If there is even a single researcher, student,
+  or person that gains some new information on this topic then all of it is worth it. It is my firm belief that open-source science can be the catalyst that drives true innovation, and I will do anything in my power to ensure that
+  life-saving data is brought out of the dark, cavernous depths of scientific labs and into the hands of the public that truly needs them.
 
   
 ## License
