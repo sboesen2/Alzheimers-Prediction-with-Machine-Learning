@@ -803,7 +803,7 @@ Adhering to style guides ensures consistency and improves code quality. Follow t
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-# Data Licensing
+### Data Licensing
 All data was obtained from reputable, publicly available sources including:
 
 - **UniProt Data:** Licensed under [UniProt Terms of Use](https://www.uniprot.org/help/license).
