@@ -17,10 +17,11 @@
 7. [API Endpoints](#api-endpoints)
    - [POST /predict](#post-predict)
    - [GET /feature_importance](#get-feature_importance)
-8. [File Structure](#file-structure)
-9. [Contributing](#contributing)
-10. [License](#license)
-11. [Contact Author](#contact-author)
+8. [GWAS Dataset Documentation](#gwas-dataset-documentation)
+9. [File Structure](#file-structure)
+10. [Contributing](#contributing)
+11. [License](#license)
+12. [Contact Author](#contact-author)
 
 
 ## Project Overview
