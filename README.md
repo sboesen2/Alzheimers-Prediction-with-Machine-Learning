@@ -803,6 +803,14 @@ Adhering to style guides ensures consistency and improves code quality. Follow t
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+# Data Licensing
+All data was obtained from reputable, publicly available sources including:
+
+- **UniProt Data:** Licensed under [UniProt Terms of Use](https://www.uniprot.org/help/license).
+- **ProteomicsDB Data:** Licensed under [ProteomicsDB Terms of Use](https://www.proteomicsdb.org/about/terms).
+- **GWAS Catalog Data:** Licensed under [GWAS Catalog Terms](https://www.ebi.ac.uk/gwas/docs/terms-and-conditions).
+- **STRING Database Data:** Licensed under [STRING License](https://string-db.org/cgi/help?sessionId=).
+
 ## Contact Author
 
 For any questions, suggestions, or feedback, please contact the author:
